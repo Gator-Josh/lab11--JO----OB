@@ -19,12 +19,10 @@ def div(a, b):
         raise "ZeroDivisionError"
 def log(a, b):
     try:
-        return math.log(b, a)
-    except:
-        raise 'ValueError'
+        result = math.log(b, a)
+        return result
+    except ValueError:
+        print("Value Error")
 def exp(a, b):
     return a**b
-
-    pass
-
-
+pass
