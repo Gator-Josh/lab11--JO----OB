@@ -6,7 +6,15 @@ calculator.py
 One function per operation, in order.
 """
 # First example
-def add(a, b): 
+def square_root(a):
+    try:
+        result = math.sqrt(a)
+        return result
+    except ValueError:
+        print("Value Error")
+def hypotenuse(a, b):
+    return math.hypot(a, b)
+def add(a, b):
     return a + b
 def sub(a, b):
     return a - b
