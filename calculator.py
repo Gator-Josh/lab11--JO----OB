@@ -11,7 +11,7 @@ def square_root(a):
         result = math.sqrt(a)
         return result
     except ValueError:
-        print("Value Error")
+        raise ValueError
 def hypotenuse(a, b):
     return math.hypot(a, b)
 def add(a, b):
@@ -24,13 +24,13 @@ def div(a, b):
     try:
         return b / a
     except:
-        raise(ZeroDivisionError)
+        raise ZeroDivisionError
 def log(a, b):
     try:
         result = math.log(b, a)
         return result
     except ValueError:
-        print("Value Error")
+        raise ValueError
 def exp(a, b):
     return a**b
 pass
