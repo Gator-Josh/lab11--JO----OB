@@ -1,11 +1,19 @@
+import math
 """
 calculator.py
 - Defines functions used to create a simple calculator
 
 One function per operation, in order.
 """
-import math
 # First example
+def square_root(a):
+    try:
+        result = math.sqrt(a)
+        return result
+    except ValueError:
+        print("Value Error")
+def hypotenuse(a, b):
+    return math.hypot(a, b)
 def add(a, b):
     return a + b
 def sub(a, b):
