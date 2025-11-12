@@ -1,8 +1,9 @@
-import unittest
-from calculator import *
 # https://github.com/Gator-Josh/lab11--JO----OB
 # Partner 1: Joshua Oliver
 # Partner 2: Owen Brooks
+
+import unittest
+from calculator import *
 
 
 class TestCalculator(unittest.TestCase):
@@ -13,14 +14,14 @@ class TestCalculator(unittest.TestCase):
         assert add(-5, -10) == -15
 
     def test_subtract(self): # 3 assertions
-        assert sub(5, 4) == 1
-        assert sub(1, 15) == -14
-        assert sub(-5, -10) == 5
+        assert subtract(5, 4) == 1
+        assert subtract(1, 15) == -14
+        assert subtract(-5, -10) == 5
     # ##########################
 
     ######## Partner 1
     def test_multiply(self): # 3 assertions
-        assert(mul(3, 5)) == 5
+        assert(mul(3, 5)) == 15
         assert(mul(4, 0)) == 0
         assert(mul(3, -4)) == -12
     #     fill in code
@@ -28,7 +29,7 @@ class TestCalculator(unittest.TestCase):
     def test_divide(self): # 3 assertions
         assert(div(2, 10)) == 5
         assert(div(10, -2)) == -0.2
-        assert(div(0, 5)) == ZeroDivisionError
+        assert(div(10, 5)) == 0.2
     #     fill in code
     # ##########################
 
@@ -39,20 +40,20 @@ class TestCalculator(unittest.TestCase):
 
 
     def test_logarithm(self): # 3 assertions
-        assert log(2, 8) == 3
-        assert log(3, 27) == 3
-        assert log(4, 64) == 3
+        assert logarithm(2, 8) == 3
+        assert logarithm(3, 27) == 3
+        assert logarithm(4, 64) == 3
 
     def test_log_invalid_base(self): # 1 assertion
         with self.assertRaises(ValueError):
-            log(-4, 5)
+            logarithm(-4, 5)
     # ##########################
     
     ######## Partner 1
     def test_log_invalid_argument(self): # 1 assertion
     #     # call log function inside, example:
         with self.assertRaises(ValueError):
-            log(0, 5)
+            logarithm(0, 5)
     #     fill in code
 
     def test_hypotenuse(self): # 3 assertions
