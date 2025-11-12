@@ -16,7 +16,7 @@ def div(a, b):
     try:
         return b / a
     except:
-        raise "ZeroDivisionError"
+        raise(ZeroDivisionError)
 def log(a, b):
     try:
         result = math.log(b, a)
