@@ -22,10 +22,9 @@ def mul(a, b):
     return a * b
 def div(a, b):
     try:
-        result = b / a
-        return result
-    except ZeroDivisionError:
-        print("division by zero")
+        return b / a
+    except:
+        raise "ZeroDivisionError"
 def log(a, b):
     try:
         result = math.log(b, a)
@@ -34,4 +33,4 @@ def log(a, b):
         print("Value Error")
 def exp(a, b):
     return a**b
-
+pass
