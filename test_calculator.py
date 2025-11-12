@@ -29,7 +29,7 @@ class TestCalculator(unittest.TestCase):
     def test_divide(self): # 3 assertions
         assert(div(2, 10)) == 5
         assert(div(10, -2)) == -0.2
-        assert(div(10, 5)) == 0.2
+        assert(div(10, 5)) == 0.5
     #     fill in code
     # ##########################
 
