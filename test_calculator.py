@@ -1,5 +1,9 @@
 import unittest
 from calculator import *
+# https://github.com/Gator-Josh/lab11--JO----OB
+# Partner 1: Joshua Oliver
+# Partner 2: Owen Brooks
+
 
 class TestCalculator(unittest.TestCase):
     ######### Partner 2
@@ -11,10 +15,16 @@ class TestCalculator(unittest.TestCase):
     # ##########################
 
     ######## Partner 1
-    # def test_multiply(self): # 3 assertions
+    def test_multiply(self): # 3 assertions
+        assert(mul(3, 5)) == 5
+        assert(mul(4, 0)) == 0
+        assert(mul(3, -4)) == -12
     #     fill in code
 
-    # def test_divide(self): # 3 assertions
+    def test_divide(self): # 3 assertions
+        assert(div(2, 10)) == 5
+        assert(div(10, -2)) == -0.2
+        assert(div(0, 5)) == ZeroDivisionError
     #     fill in code
     # ##########################
 
@@ -34,19 +44,25 @@ class TestCalculator(unittest.TestCase):
     # ##########################
     
     ######## Partner 1
-    # def test_log_invalid_argument(self): # 1 assertion
+    def test_log_invalid_argument(self): # 1 assertion
     #     # call log function inside, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #     logarithm(0, 5)
+        with self.assertRaises(ValueError):
+            log(0, 5)
     #     fill in code
 
-    # def test_hypotenuse(self): # 3 assertions
+    def test_hypotenuse(self): # 3 assertions
     #     fill in code
+        assert(hypotenuse(3, 4)) == 5
+        assert(hypotenuse(3, -4)) == 5
+        self.assertAlmostEqual(hypotenuse(2, 4) , 4.4721359549995793928, 9, "Not Equal")
 
-    # def test_sqrt(self): # 3 assertions
+    def test_sqrt(self): # 3 assertions
     #     # Test for invalid argument, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #    square_root(NUM)
+        with self.assertRaises(ValueError):
+            square_root(-20)
+        assert(square_root(9) == 3)
+
+        self.assertAlmostEqual(square_root(20), 4.4721359549995793928, 9, "Not Equal")
     #     # Test basic function
     #     fill in code
     ##########################

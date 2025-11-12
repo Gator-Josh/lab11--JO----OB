@@ -1,3 +1,7 @@
+# https://github.com/Gator-Josh/lab11--JO----OB
+# Partner 1: Joshua Oliver
+# Partner 2: Owen Brooks
+
 import math
 """
 calculator.py
